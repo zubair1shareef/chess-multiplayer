@@ -46,7 +46,7 @@ export const Game = () => {
     return <div className="justify-center flex">
         <div className="pt-8 max-w-screen-lg w-full">
             <div className="grid grid-cols-6 gap-4 w-full">
-                <div className="col-span-4 w-full flex justify-center">
+                <div className="col-span-4 w-full flex justify-center shadow-sm rounded-sm border-4">
                     <ChessBoard chess={chess} setBoard={setBoard} socket={socket} board={board} />
                 </div>
                 <div className="col-span-2 bg-slate-900 w-full flex justify-center">

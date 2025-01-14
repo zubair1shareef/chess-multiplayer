@@ -7,7 +7,7 @@ export const ChessBoard = ({ chess, board, socket, setBoard }) => {
     const [from, setFrom] = useState(null);
     const currnetplayer = sessionStorage.getItem('color')
 
-    return <div className="text-white-200">
+    return <div className="text-white-200 shadow-sm">
         {board.map((row, i) => {
             return <div key={i} className="flex">
                 {row.map((square, j) => {
@@ -43,7 +43,7 @@ export const ChessBoard = ({ chess, board, socket, setBoard }) => {
                             console.log(error)
                         }
                         // ${currnetplayer==square?.color?'cursor-pointer':'cursor-not-allowed'}
-                    }} key={j} className={`w-16 h-16 cursor-not-allowed ${currnetplayer==square?.color?'cursor-pointer':'cursor-not-allowed'} ${(i + j) % 2 === 0 ? 'bg-green-500' : 'bg-slate-500'}`}> 
+                    }} key={j} className={`w-16 h-16 cursor-not-allowed ${currnetplayer==square?.color?'cursor-pointer':'cursor-not-allowed'} ${(i + j) % 2 === 0 ? 'bg-white-500' : 'bg-slate-500'}`}> 
                         <div className="w-full justify-center flex h-full">
                             <div className="h-full justify-center flex flex-col">
                                 {/* {square?.type} */}
